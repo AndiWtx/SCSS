@@ -6,40 +6,54 @@ div {
   border-color: red;
 }
 
-section{
-  display:inline-flex;
+section {
+  display: inline-flex;
 }
 
-h1{
+h1 {
   text-align: center;
   color: green;
   text-decoration: underline 1px blue;
 }
 
-.article1{
-  display:inline-flex;
-  height:100px;
-  width:auto;
+.article1 {
+  padding: 10px 8px;
+  display: inline-flex;
+  height: auto;
+  width: auto;
   text-align: center;
+  color: blue;
 }
 
-.article2{
-  display:inline-flex;
-  height:100px;
-  width:auto;
+.article2 {
+  padding: 10px 8px;
+  display: inline-flex;
+  height: auto;
+  width: auto;
   text-align: center;
+  color: red;
 }
 
-.article3{
-  display:inline-flex;
-  height:100px;
-  width:auto;
+.article3 {
+  padding: 10px 8px;
+  display: inline-flex;
+  height: auto;
+  width: auto;
   text-align: center;
+  color: blue;
 }
 
-.article4{
-  display:inline-flex;
-  height:100px;
-  width:auto;
+.article4 {
+  padding: 10px 8px;
+  display: inline-flex;
+  height: auto;
+  width: auto;
   text-align: center;
+  color: red;
 }
+
+article {
+  border: 2px solid green;
+}
+
+/*# sourceMappingURL=style.css.map */
