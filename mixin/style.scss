@@ -1,0 +1,64 @@
+$color-one:blue;
+$color-two:red;
+$color-three:green;
+$size: 1rem;
+
+
+div {
+  margin: 20px;
+  border: 1px;
+  border-style: solid;
+  padding: 15px;
+  border-color: $color-two;
+}
+
+section{
+  padding: 10px;
+  display:inline-flex;
+}
+
+h1{
+  text-align: center;
+  color: $color-three;
+  text-decoration: underline 1px $color-one;
+}
+
+@mixin article($color, $border-color, $size){
+  border: 2px solid $border-color;
+  font-size: $size;
+  padding:10px;
+  display:inline-flex;
+  height:auto;
+  width:auto;
+  text-align: center;
+  color: $color;
+}
+
+.article1{
+  @include article(blue, green, 1rem);
+  
+}
+
+.article2{
+  @include article(red, green, 1rem);
+  ;
+}
+
+.article3{
+  @include article(blue, green, 1rem);
+  
+}
+
+.article4{
+  @include article(red,green, 1rem);
+  
+}
+
+.article5{
+  @include article(green,blue, 24px);
+  padding: 20px 50px;
+}
+
+
+
+
