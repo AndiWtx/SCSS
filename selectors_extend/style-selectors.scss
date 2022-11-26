@@ -1,0 +1,84 @@
+@use "sass:color";
+
+$color-one: color.adjust(blue, $lightness: -10%);
+$color-two: color.adjust(red, $lightness: -10%);
+$color-three: color.adjust(green, $lightness: -10%);
+
+@function toRem($value){
+    $remValue: calc($value / 16) + rem;
+    @return $remValue;
+} 
+
+
+div {
+  display:flex;
+  flex-direction: column;
+  margin: toRem(20);
+  border: toRem(1);
+  border-style: solid;
+  padding: toRem(15);
+  border-color: $color-two;
+}
+
+section{
+  padding: toRem(10);
+  display:inline-flex;
+}
+
+%text{
+  text-align: center;
+  color: $color-three;
+  text-decoration: underline toRem(1) $color-one;
+}
+
+.hOne{
+  @extend %text;
+}
+
+.hTwo{
+  @extend %text;
+  padding: 1rem;
+  margin: auto;
+  border: toRem(1) solid $color-two;
+  width: toRem(auto);
+}
+
+@mixin article($color, $border-color, $size){
+  border: toRem(2) solid $border-color;
+  font-size: $size;
+  padding: toRem(10);
+  display:inline-flex;
+  height:auto;
+  width:auto;
+  text-align: center;
+  color: $color;
+}
+
+.article1{
+  @include article($color-one, $color-three, 16px);
+  
+}
+
+.article2{
+  @include article($color-two, $color-three, 16px);
+  ;
+}
+
+.article3{
+  @include article($color-one, $color-three, 16px);
+  
+}
+
+.article4{
+  @include article($color-two, $color-three, 16px);
+  
+}
+
+.article5{
+  @include article($color-three, $color-one, 24px);
+  padding: toRem(20) toRem(50);
+}
+
+
+
+

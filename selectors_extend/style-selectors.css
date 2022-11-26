@@ -1,0 +1,85 @@
+div {
+  display: flex;
+  flex-direction: column;
+  margin: 1.25rem;
+  border: 0.0625rem;
+  border-style: solid;
+  padding: 0.9375rem;
+  border-color: #cc0000;
+}
+
+section {
+  padding: 0.625rem;
+  display: inline-flex;
+}
+
+.hTwo, .hOne {
+  text-align: center;
+  color: #004d00;
+  text-decoration: underline 0.0625rem #0000cc;
+}
+
+.hTwo {
+  padding: 1rem;
+  margin: auto;
+  border: 0.0625rem solid #cc0000;
+  width: calc(auto / 16)rem;
+}
+
+.article1 {
+  border: 0.125rem solid #004d00;
+  font-size: 16px;
+  padding: 0.625rem;
+  display: inline-flex;
+  height: auto;
+  width: auto;
+  text-align: center;
+  color: #0000cc;
+}
+
+.article2 {
+  border: 0.125rem solid #004d00;
+  font-size: 16px;
+  padding: 0.625rem;
+  display: inline-flex;
+  height: auto;
+  width: auto;
+  text-align: center;
+  color: #cc0000;
+}
+
+.article3 {
+  border: 0.125rem solid #004d00;
+  font-size: 16px;
+  padding: 0.625rem;
+  display: inline-flex;
+  height: auto;
+  width: auto;
+  text-align: center;
+  color: #0000cc;
+}
+
+.article4 {
+  border: 0.125rem solid #004d00;
+  font-size: 16px;
+  padding: 0.625rem;
+  display: inline-flex;
+  height: auto;
+  width: auto;
+  text-align: center;
+  color: #cc0000;
+}
+
+.article5 {
+  border: 0.125rem solid #0000cc;
+  font-size: 24px;
+  padding: 0.625rem;
+  display: inline-flex;
+  height: auto;
+  width: auto;
+  text-align: center;
+  color: #004d00;
+  padding: 1.25rem 3.125rem;
+}
+
+/*# sourceMappingURL=style-selectors.css.map */
