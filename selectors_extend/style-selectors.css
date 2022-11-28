@@ -13,13 +13,14 @@ section {
   display: inline-flex;
 }
 
-.hTwo, .hOne {
+.hOne {
   text-align: center;
   color: #004d00;
   text-decoration: underline 0.0625rem #0000cc;
 }
 
-.hTwo {
+.hOne-hTwo {
+  color: #004d00;
   padding: 1rem;
   margin: auto;
   border: 0.0625rem solid #cc0000;
