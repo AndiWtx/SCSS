@@ -1,0 +1,6 @@
+@use "sass:color";
+
+
+$color-one: color.adjust(blue, $lightness: -10%);
+$color-two: color.adjust(red, $lightness: -10%);
+$color-three: color.adjust(green, $lightness: -10%);

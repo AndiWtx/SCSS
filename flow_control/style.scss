@@ -1,0 +1,116 @@
+@use "sass:color";
+@use "function toRem.scss" as f;
+@use "variables.scss" as c;
+$sizes: 1rem, 2rem, 3rem; 
+$var: 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,19,20;
+$bg-color: white;
+$txt-color: black;
+$bg-adjusted: color.adjust($bg-color, $lightness: -5%);
+
+
+.bigDiv {
+  display:flex;
+  flex-direction: column;
+  margin: f.toRem(20);
+  border: f.toRem(1);
+  border-style: solid;
+  padding: f.toRem(15);
+  border-color: c.$color-two;
+}
+
+section{
+  padding: f.toRem(10);
+  display:inline-flex;
+}
+
+%text{
+  text-align: center;
+  color: c.$color-three;
+  text-decoration: underline f.toRem(1) c.$color-one;
+}
+
+.hOne{
+  @extend %text;
+  
+  &-hTwo{
+    color: c.$color-three;
+    padding: f.toRem(16);
+    margin: auto;
+    border: f.toRem(1) solid c.$color-two;
+    width: f.toRem(auto);
+}
+}
+
+.numbers{
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fs-1rem, .fs-2rem, .fs-3rem{
+  display: flex; 
+  height: f.toRem(45);
+  width: f.toRem(45); 
+  border: f.toRem(1) solid c.$color-two;
+  padding: f.toRem(15);
+}
+
+@each $size in $sizes{
+  .fs-#{$size}{
+  font-size: $size;
+}
+}
+
+@for $var from 1 through 20{
+  .numbers div:nth-child(#{$var}){
+    background-color: color.adjust($bg-color, $lightness: -5%*$var);  
+    color: color.adjust($txt-color, $lightness: +5%*$var);  
+  }
+  @if $var == 10{
+    .numbers div:nth-child(#{$var}){
+    background-color: blue;
+    color: red;
+    }
+  }
+}
+
+@mixin article($color, $border-color, $size){
+  border: f.toRem(2) solid $border-color;
+  font-size: $size;
+  padding: f.toRem(10);
+  display:inline-flex;
+  height:auto;
+  width:auto;
+  text-align: center;
+  color: $color;
+}
+
+.article1{
+  @include article(c.$color-one, c.$color-three, 16px);
+  
+}
+
+.article2{
+  @include article(c.$color-two, c.$color-three, 16px);
+  ;
+}
+
+.article3{
+  @include article(c.$color-one, c.$color-three, 16px);
+  
+}
+
+.article4{
+  @include article(c.$color-two, c.$color-three, 16px);
+  
+}
+
+.article5{
+  @include article(c.$color-three, c.$color-one, 24px);
+  padding: f.toRem(20) f.toRem(50);
+  width:100%;
+}
+
+
+
+
